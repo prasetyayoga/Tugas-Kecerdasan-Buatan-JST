@@ -43,7 +43,6 @@ void loop()
 {
   
   if(gas_data<100){
-  gas_data=analogRead(gas_pin);
   window.write(0);
   digitalWrite(buzzer,LOW);
   digitalWrite(led,LOW);
