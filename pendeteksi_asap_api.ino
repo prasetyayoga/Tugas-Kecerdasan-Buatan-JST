@@ -2,6 +2,7 @@
 #include <Servo.h>
 #define sensorLightPin    A2
 
+//knp teada
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 Servo window;
 
