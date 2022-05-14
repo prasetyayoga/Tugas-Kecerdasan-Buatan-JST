@@ -5,6 +5,7 @@
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 Servo window;
 
+//Apa yang harus saya lakukan ???
 int servo = 9;
 int tsensor = A0;
 int pump = 7; 
