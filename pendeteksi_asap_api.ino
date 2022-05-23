@@ -57,7 +57,7 @@ void loop()
   }
   
   
-  if(gas_data>= 100){
+  if((gas_data > 100)&&(gas_data < 400)){
     gas_data=analogRead(gas_pin);
     window.write(45);
     digitalWrite(buzzer,HIGH);
@@ -76,7 +76,7 @@ void loop()
   
   int light = analogRead(ldr);  //sensor cahaya
   Serial.println(light);
-  if (light > 900 && temp > 100 && gas_data > 180)
+  if (light > 600 && temp > 100 && gas_data > 215)
   {
     window.write(90); //memutar servo ke 90 derajat
     digitalWrite(pump,HIGH);
