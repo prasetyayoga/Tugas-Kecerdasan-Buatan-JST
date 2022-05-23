@@ -11,7 +11,6 @@ int pump = 7;
 int buzzer = 8; 
 int led = 6;
 int ldr = A1;
-int state = 0;
 int gas_pin= A2;
 float gas_data= A2;
  
@@ -29,7 +28,7 @@ void setup()
   lcd.setCursor(2,0);
   lcd.print("PENDETEKSI");
   lcd.setCursor(2,1);
-  lcd.print("Asap & Api");
+  lcd.print("KEBAKARAN");
   delay(1000);
   lcd.clear();
   
@@ -53,9 +52,7 @@ void loop()
   digitalWrite(buzzer,LOW);
   digitalWrite(led,LOW);
   digitalWrite(pump,LOW);
-  
   }
-  
   
   if((gas_data > 100)&&(gas_data < 400)){
     gas_data=analogRead(gas_pin);
@@ -65,8 +62,7 @@ void loop()
     digitalWrite(pump,LOW);
     delay(100);
     digitalWrite(led, LOW);
-    delay(100);
-   
+    delay(100); 
   }
   
   float voltage = analogRead(tsensor) * 5; //sensor temp
